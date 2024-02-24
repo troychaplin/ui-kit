@@ -9,10 +9,12 @@ jobs:
   build-and-deploy:
     name: Build storybook and deploy to github pages
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
+
     steps:
-      - name: Checkout
+      - name: 🛎️ Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -20,10 +22,10 @@ jobs:
         with:
           node-version: "21.x"
 
-      - name: Install dependencies
+      - name: 📦 Install
         run: npm install
 
-      - name: Build Storybook
+      - name: 🔧 Build
         run: npm run build:storybook
         env:
           NODE_OPTIONS: --max_old_space_size=4096
