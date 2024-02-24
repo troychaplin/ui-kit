@@ -2,7 +2,7 @@
   "name": "@troychaplin79/ui-kit",
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
   "homepage": "https://github.com/troychaplin/ui-kit#readme",
-  "author": "Ali Nuri",
+  "author": "Troy Chaplin",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -31,13 +31,16 @@
     "storybook": "storybook dev -p 6006",
     "build": "tsc && vite build",
     "build:storybook": "storybook build",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "rebuild": "rn -rf node_modules ; npm install"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
