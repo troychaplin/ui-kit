@@ -6,14 +6,31 @@ on:
       - develop
 
 jobs:
-  deploy:
+  build-and-deploy:
+    name: Build storybook and deploy to github pages
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Build and deploy Storybook
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          publish_dir: ./storybook-static
+          node-version: "20.x"
+
+      - name: Install dependencies with yarn
+        run: yarn install
+
+      - name: Build Storybook
+        run: yarn build-storybook
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: storybook-static
+          branch: gh-pages
+          # token: ${{ secrets.GITHUB_TOKEN }}
