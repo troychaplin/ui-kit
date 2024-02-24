@@ -32,9 +32,7 @@
     "build": "tsc && vite build",
     "build:storybook": "storybook build",
     "prettier": "prettier --write .",
-    "rebuild": "rn -rf node_modules ; npm install",
-    "test": "echo \"No test specified\" && exit 0",
-    "prepare": "husky"
+    "rebuild": "rn -rf node_modules ; npm install"
   },
   "dependencies": {
     "react": "^18.2.0",
