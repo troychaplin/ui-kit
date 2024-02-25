@@ -1,9 +1,9 @@
 interface ButtonProps {
-    primary?: boolean;
-    backgroundColor?: string;
-    size?: 'small' | 'medium' | 'large';
+    isOutline?: boolean;
+    color?: string;
+    size?: 'sm' | 'md' | 'lg';
     label: string;
     onClick?: () => void;
 }
-export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Button: ({ isOutline, size, color, label, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
 export {};
