@@ -1,20 +1,21 @@
-import './button.css'
-
 interface ButtonProps {
-  primary?: boolean
-  backgroundColor?: string
-  size?: 'small' | 'medium' | 'large'
+  isOutline?: boolean
+  color?: string
+  size?: 'sm' | 'md' | 'lg'
   label: string
   onClick?: () => void
 }
 
-export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
+export const Button = ({ isOutline = false, size = 'md', color = '#369173', label, ...props }: ButtonProps) => {
+  const type = isOutline ? 'ui-button--outline' : 'ui-button--solid'
+
+  console.log(color)
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={['ui-button', `ui-button--${size}`, type].join(' ')}
+      style={isOutline ? { borderColor: color } : { backgroundColor: color }}
       {...props}
     >
       {label}
