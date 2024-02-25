@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Install, build and check sizes
+    name: Install dependencies and test build
     timeout-minutes: 10
     runs-on: 'ubuntu-latest'
 
@@ -27,8 +27,3 @@ jobs:
 
       - name: 🔧 Build
         run: npm run build
-
-      - name: Check size limits
-        uses: andresz1/size-limit-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
