@@ -1,14 +1,19 @@
 name: Build Test
 
-on:
-  pull_request:
-    branches: [develop]
+# on:
+#   pull_request:
+#     branches: [develop]
+
+on: [push]
 
 jobs:
   build:
     name: Build, lint, and test project
     timeout-minutes: 10
     runs-on: 'ubuntu-latest'
+
+    env:
+      CI_JOB_NUMBER: 1
 
     steps:
       - name: Checkout
@@ -24,3 +29,8 @@ jobs:
 
       - name: Build with yarn
         run: npm run build
+
+      - name: Check size limits
+        uses: andresz1/size-limit-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
