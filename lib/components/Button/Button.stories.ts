@@ -14,37 +14,37 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     label: 'Button',
-    color: '#369173',
+    color: '#2b8164',
   },
 }
 
-export const Outline: Story = {
-  args: {
-    label: 'Outline Button',
-    isOutline: true,
-  },
-}
+// export const Outline: Story = {
+//   args: {
+//     label: 'Outline Button',
+//     isOutline: true,
+//   },
+// }
 
-export const Small: Story = {
-  args: {
-    size: 'sm',
-    label: 'Small Button',
-    color: '#7a2bcf',
-  },
-}
+// export const Small: Story = {
+//   args: {
+//     size: 'sm',
+//     label: 'Small Button',
+//     color: '#7a2bcf',
+//   },
+// }
 
-export const Medium: Story = {
-  args: {
-    size: 'md',
-    label: 'Medium Button',
-    color: '#c4812f',
-  },
-}
+// export const Medium: Story = {
+//   args: {
+//     size: 'md',
+//     label: 'Medium Button',
+//     color: '#c4812f',
+//   },
+// }
 
-export const Large: Story = {
-  args: {
-    size: 'lg',
-    label: 'Large Button',
-    color: '#2896b6',
-  },
-}
+// export const Large: Story = {
+//   args: {
+//     size: 'lg',
+//     label: 'Large Button',
+//     color: '#2896b6',
+//   },
+// }
