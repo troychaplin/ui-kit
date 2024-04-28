@@ -11,22 +11,14 @@ const meta = {
 } satisfies Meta<typeof ButtonGroup>
 
 export default meta
-type Story = StoryObj<typeof ButtonGroup>
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-  render: () => (
-    <ButtonGroup>
-      <Button color="#2b8164" label="Button One" />
-      <Button color="#b6d0c7" label="Button Two" />
-    </ButtonGroup>
-  ),
-}
-
-export const Center: Story = {
-  render: () => (
-    <ButtonGroup isCenter>
-      <Button color="#2b8164" label="Button One" />
-      <Button color="#b6d0c7" label="Button Two" />
+  render: (args) => (
+    <ButtonGroup {...args}>
+      <Button label="Button One" />
+      <Button label="Button Two" bgColor="#d3eae2" textColor="#131313" />
+      <Button label="Button Three" textColor="#0b4a35" isOutline />
     </ButtonGroup>
   ),
 }

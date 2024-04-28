@@ -1,5 +1,6 @@
 interface ButtonProps {
-  color?: string
+  bgColor?: string
+  textColor?: string
   label: string
   type?: 'button' | 'submit' | 'reset'
   size?: 'sm' | 'md' | 'lg'
@@ -8,7 +9,8 @@ interface ButtonProps {
 }
 
 export const Button = ({
-  color = '#369173',
+  bgColor = '#2b8164',
+  textColor = '#ffffff', // Default text color
   label,
   type = 'button',
   size = 'md',
@@ -17,13 +19,15 @@ export const Button = ({
 }: ButtonProps) => {
   const buttonStyle = isOutline ? 'ui-button--outline' : 'ui-button--solid'
 
+  // Inline style object to handle both background and text color
+  const style = {
+    color: textColor,
+    backgroundColor: isOutline ? 'transparent' : bgColor,
+    borderColor: isOutline ? bgColor : 'transparent',
+  }
+
   return (
-    <button
-      type={type}
-      className={['ui-button', `ui-button--${size}`, buttonStyle].join(' ')}
-      style={isOutline ? { borderColor: color } : { backgroundColor: color }}
-      {...props}
-    >
+    <button type={type} className={['ui-button', `ui-button--${size}`, buttonStyle].join(' ')} style={style} {...props}>
       {label}
     </button>
   )
