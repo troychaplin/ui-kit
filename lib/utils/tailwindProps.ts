@@ -25,18 +25,33 @@ export const gridColumns = {
 
 export const gridSpacing = {
   '0': 'gap-0',
-  '5': 'gap-3 md:gap-5',
+  '2': 'gap-2',
+  '2.5': 'gap-2.5',
+  '5': 'gap-5',
 }
 
-export const rounded = {
+export const roundedCorners = {
+  none: 'rounded-none',
+  sm: 'rounded-sm',
   base: 'rounded',
   md: 'rounded-md',
   lg: 'rounded-lg',
   xl: 'rounded-xl',
+  '2xl': 'rounded-2xl',
   full: 'rounded-full',
 }
 
+export const dropShadow = {
+  none: 'shadow-none',
+  base: 'shadow',
+  md: 'shadow-md',
+  lg: 'shadow-lg',
+  xl: 'shadow-xl',
+  '2xl': 'shadow-2xl',
+}
+
 export const borderWidth = {
+  none: 'border-none',
   1: 'border',
   2: 'border-2',
   4: 'border-4',

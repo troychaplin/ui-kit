@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { CardGroup } from '.'
-// import { Card } from '../Card'
+import { Card } from '../Card'
 
 const meta = {
   title: 'Components/Card Group',
@@ -17,9 +17,9 @@ export const Primary: Story = {
   render: (args) => (
     <CardGroup {...args}>
       {Array.from({ length: 8 }).map((_, index) => (
-        <div key={index} className="rounded-md bg-slate-200">
+        <Card rounded="base" border={1} borderColor="#e3e3e3">
           <p>Card #{index}</p>
-        </div>
+        </Card>
       ))}
     </CardGroup>
   ),
