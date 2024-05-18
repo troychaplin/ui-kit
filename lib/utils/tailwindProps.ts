@@ -26,7 +26,6 @@ export const gridColumns = {
 export const gridSpacing = {
   '0': 'gap-0',
   '5': 'gap-3 md:gap-5',
-  '10': 'gap-6 md:gap-10',
 }
 
 export const rounded = {

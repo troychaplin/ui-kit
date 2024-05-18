@@ -1,8 +1,14 @@
+import { gridColumns, gridSpacing } from '../../utils/tailwindProps'
+
+type GridColumnsKeys = keyof typeof gridColumns
+type GridSpacingKeys = keyof typeof gridSpacing
+
 interface CardGroupProps {
   children?: React.ReactNode
-  isCenter?: boolean
+  cols?: GridColumnsKeys
+  gridGap?: GridSpacingKeys
 }
 
-export const CardGroup = ({ children }: CardGroupProps) => {
-  return <div className="grid grid-cols-3 gap-5">{children}</div>
+export const CardGroup = ({ children, cols = '1', gridGap = '5' }: CardGroupProps) => {
+  return <div className={`grid ${gridColumns[cols]} ${gridSpacing[gridGap]}`}>{children}</div>
 }
