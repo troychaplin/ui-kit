@@ -1,9 +1,20 @@
 interface ButtonGroupProps {
   children?: React.ReactNode
   isCenter?: boolean
+  gap?: number
 }
 
-export const ButtonGroup = ({ children, isCenter = false }: ButtonGroupProps) => {
+export const ButtonGroup = ({ children, isCenter = false, gap = 10 }: ButtonGroupProps) => {
   const centerButtons = isCenter ? 'justify-center' : 'justify-start'
-  return <div className={`flex gap-2.5 ${centerButtons}`}>{children}</div>
+
+  // Inline style object to handle grid gap
+  const style = {
+    gridGap: gap ? gap : '',
+  }
+
+  return (
+    <div className={`flex ${centerButtons}`} style={style}>
+      {children}
+    </div>
+  )
 }
