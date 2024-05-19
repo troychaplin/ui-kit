@@ -16,7 +16,7 @@ export const Primary: Story = {
     children: 'Customize the card',
     rounded: 'base',
     shadow: 'md',
-    border: 1,
+    borderWidth: 1,
     borderColor: '#dfdfdf',
   },
 }

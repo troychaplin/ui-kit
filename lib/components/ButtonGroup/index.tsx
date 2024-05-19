@@ -1,14 +1,20 @@
-import { gridSpacing } from '../../utils/tailwindProps'
-
-type GridSpacingKeys = keyof typeof gridSpacing
-
 interface ButtonGroupProps {
   children?: React.ReactNode
   isCenter?: boolean
-  gap?: GridSpacingKeys
+  gap?: number
 }
 
-export const ButtonGroup = ({ children, isCenter = false, gap = '5' }: ButtonGroupProps) => {
+export const ButtonGroup = ({ children, isCenter = false, gap = 10 }: ButtonGroupProps) => {
   const centerButtons = isCenter ? 'justify-center' : 'justify-start'
-  return <div className={`flex ${gridSpacing[gap]} ${centerButtons}`}>{children}</div>
+
+  // Inline style object to handle grid gap
+  const style = {
+    gridGap: gap ? gap : '',
+  }
+
+  return (
+    <div className={`flex ${centerButtons}`} style={style}>
+      {children}
+    </div>
+  )
 }

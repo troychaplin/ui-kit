@@ -1,13 +1,20 @@
-import { gridColumns, gridSpacing } from '../../utils/tailwindProps'
-
-type GridSpacingKeys = keyof typeof gridSpacing
+import { gridColumns } from '../../utils/tailwindProps'
 
 interface CardGroupProps {
   children?: React.ReactNode
   cols?: 1 | 2 | 3 | 4
-  gap?: GridSpacingKeys
+  gap?: number
 }
 
-export const CardGroup = ({ children, cols = 3, gap = '5' }: CardGroupProps) => {
-  return <div className={`grid ${gridColumns[cols]} ${gridSpacing[gap]}`}>{children}</div>
+export const CardGroup = ({ children, cols = 3, gap = 20 }: CardGroupProps) => {
+  // Inline style object to handle grid gap
+  const style = {
+    gridGap: gap ? gap : '',
+  }
+
+  return (
+    <div className={`grid ${gridColumns[cols]}`} style={style}>
+      {children}
+    </div>
+  )
 }

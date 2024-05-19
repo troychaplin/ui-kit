@@ -17,7 +17,7 @@ export const Primary: Story = {
   render: (args) => (
     <CardGroup {...args}>
       {Array.from({ length: 8 }).map((_, index) => (
-        <Card rounded="base" border={1} borderColor="#e3e3e3">
+        <Card rounded="base" borderWidth={1} borderColor="#dfdfdf">
           <p>Card #{index}</p>
         </Card>
       ))}
