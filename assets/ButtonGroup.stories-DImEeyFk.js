@@ -1,0 +1,7 @@
+import{j as e}from"./jsx-runtime-X2b_N9AH.js";import{B as r}from"./index-DfvUHPKU.js";import"./index-uCp2LrAq.js";import"./_commonjsHelpers-BosuxZz1.js";const a=({children:o,isCenter:i=!1,gap:n=10})=>{const p=i?"justify-center":"justify-start",d={gridGap:n||""};return e.jsx("div",{className:`ui-buttongroup flex ${p}`,style:d,children:o})};a.__docgenInfo={description:"",methods:[],displayName:"ButtonGroup",props:{children:{required:!1,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:""},isCenter:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},gap:{required:!1,tsType:{name:"number"},description:"",defaultValue:{value:"10",computed:!1}}}};const x={title:"Components/Button Group",component:a,tags:["autodocs"]},t={render:o=>e.jsxs(a,{...o,children:[e.jsx(r,{label:"Button One"}),e.jsx(r,{label:"Button Two",bgColor:"#d3eae2",textColor:"#131313"}),e.jsx(r,{label:"Button Three",textColor:"#0b4a35",isOutline:!0})]})};var s,u,l;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  render: args => <ButtonGroup {...args}>
+      <Button label="Button One" />
+      <Button label="Button Two" bgColor="#d3eae2" textColor="#131313" />
+      <Button label="Button Three" textColor="#0b4a35" isOutline />
+    </ButtonGroup>
+}`,...(l=(u=t.parameters)==null?void 0:u.docs)==null?void 0:l.source}}};const b=["Primary"];export{t as Primary,b as __namedExportsOrder,x as default};
