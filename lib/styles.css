@@ -3,6 +3,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Priority Plus */
-@import './components/Button/styles.css';
-@import './components/Main/styles.css';
+/* Global Classes */
+@import './styles/button-links.css';
+@import './styles/max-width.css';
