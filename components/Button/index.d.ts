@@ -1,4 +1,4 @@
-interface ButtonProps {
+export interface ButtonProps {
     bgColor?: string;
     textColor?: string;
     label: string;
@@ -8,4 +8,3 @@ interface ButtonProps {
     onClick?: () => void;
 }
 export declare const Button: ({ bgColor, textColor, label, type, size, isOutline, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
-export {};

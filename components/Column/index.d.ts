@@ -1,7 +1,7 @@
 import { gridColumns } from '../../utils/tailwindProps';
 
 type ColumnKeys = keyof typeof gridColumns;
-interface ColumnProps {
+export interface ColumnProps {
     children?: React.ReactNode;
     cols?: ColumnKeys;
     gap?: number;
