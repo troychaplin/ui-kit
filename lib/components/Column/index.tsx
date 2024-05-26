@@ -3,13 +3,13 @@ import { ColumnContent } from './content'
 
 type ColumnKeys = keyof typeof gridColumns
 
-interface ColumnProps {
+export interface ColumnProps {
   children?: React.ReactNode
   cols?: ColumnKeys
   gap?: number
 }
 
-export const ColumnContainer = ({ children, cols = 2, gap = 30 }: ColumnProps) => {
+export const ColumnContainer = ({ children, cols = 2, gap = 25 }: ColumnProps) => {
   // Inline style object to handle grid gap
   const style = {
     gridGap: gap ? gap : '',

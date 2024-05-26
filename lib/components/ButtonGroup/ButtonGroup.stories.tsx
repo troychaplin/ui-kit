@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { ButtonGroup } from '.'
+import { ButtonGroup, ButtonGroupProps } from '.'
 import { Button } from '../Button'
 
 const meta = {
@@ -14,6 +14,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
+  args: {
+    gap: 15,
+    isCenter: false,
+  } as ButtonGroupProps,
   render: (args) => (
     <ButtonGroup {...args}>
       <Button label="Button One" />

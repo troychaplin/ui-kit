@@ -1,10 +1,10 @@
-interface ButtonGroupProps {
+export interface ButtonGroupProps {
   children?: React.ReactNode
   isCenter?: boolean
   gap?: number
 }
 
-export const ButtonGroup = ({ children, isCenter = false, gap = 10 }: ButtonGroupProps) => {
+export const ButtonGroup = ({ children, isCenter = false, gap = 15 }: ButtonGroupProps) => {
   const centerButtons = isCenter ? 'justify-center' : 'justify-start'
 
   // Inline style object to handle grid gap

@@ -1,4 +1,4 @@
-interface ButtonProps {
+export interface ButtonProps {
   bgColor?: string
   textColor?: string
   label: string

@@ -1,12 +1,12 @@
 import { gridColumns } from '../../utils/tailwindProps'
 
-interface CardGroupProps {
+export interface CardGroupProps {
   children?: React.ReactNode
   cols?: 1 | 2 | 3 | 4
   gap?: number
 }
 
-export const CardGroup = ({ children, cols = 3, gap = 30 }: CardGroupProps) => {
+export const CardGroup = ({ children, cols = 3, gap = 25 }: CardGroupProps) => {
   // Inline style object to handle grid gap
   const style = {
     gridGap: gap ? gap : '',
