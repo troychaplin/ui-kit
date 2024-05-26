@@ -23,7 +23,7 @@ export const Card = ({ children, rounded, shadow, borderWidth, borderColor }: Ca
   }
 
   return (
-    <div className={`bg-white ${cardRounded} ${cardShadow}`} style={style}>
+    <div className={`ui-card bg-white ${cardRounded} ${cardShadow}`} style={style}>
       <div className="py-5 px-7">{children}</div>
     </div>
   )
