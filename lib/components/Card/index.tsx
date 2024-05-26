@@ -2,7 +2,6 @@ import { roundedCorners, dropShadow } from '../../utils/tailwindProps'
 
 type RoundedKeys = keyof typeof roundedCorners
 type ShadowKeys = keyof typeof dropShadow
-// type BorderKeys = keyof typeof borderWidth
 
 interface CardProps {
   children?: React.ReactNode

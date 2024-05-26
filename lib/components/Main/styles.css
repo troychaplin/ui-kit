@@ -1,0 +1,19 @@
+.ui-max-width-5xl > :not(.ui-no-max-width) {
+  @apply max-w-5xl mx-auto;
+}
+
+.ui-max-width-6xl > :not(.ui-no-max-width) {
+  @apply max-w-6xl mx-auto;
+}
+
+.ui-max-width-7xl > :not(.ui-no-max-width) {
+  @apply mx-auto max-w-7xl;
+}
+
+.ui-max-width-max > :not(.ui-no-max-width) {
+  @apply mx-auto max-w-max;
+}
+
+.ui-max-width-full > :not(.ui-no-max-width) {
+  @apply max-w-full mx-auto;
+}
