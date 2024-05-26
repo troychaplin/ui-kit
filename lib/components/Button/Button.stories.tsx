@@ -1,6 +1,6 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-
-import { Button } from '.'
+import { Button, ButtonProps } from '../Button'
 
 const meta = {
   title: 'Components/Button',
@@ -15,5 +15,6 @@ export const Primary: Story = {
   args: {
     label: 'Button',
     bgColor: '#2b8164',
-  },
+  } as ButtonProps,
+  render: (args) => <Button {...args} />,
 }

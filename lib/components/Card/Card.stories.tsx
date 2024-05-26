@@ -1,6 +1,6 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-
-import { Card } from '.'
+import { Card, CardProps } from '.'
 
 const meta = {
   title: 'Components/Card',
@@ -18,5 +18,10 @@ export const Primary: Story = {
     shadow: 'md',
     borderWidth: 1,
     borderColor: '#dfdfdf',
-  },
+  } as CardProps,
+  render: (args) => (
+    <Card {...args}>
+      <p>Card component</p>
+    </Card>
+  ),
 }

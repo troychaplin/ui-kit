@@ -3,9 +3,10 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Main, MainProps } from '.'
 import { Section } from '../Section'
 
-const meta: Meta<typeof Main> = {
+const meta = {
   title: 'Layouts/Main',
   component: Main,
+  // subcomponents: { Button },
   tags: ['autodocs'],
 } satisfies Meta<typeof Main>
 
@@ -14,11 +15,14 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    children: <p>Main element</p>,
     maxWidth: '5xl',
     noProse: false,
   } as MainProps,
-  render: (args) => <Main {...args} />,
+  render: (args) => (
+    <Main {...args}>
+      <p>Main element</p>
+    </Main>
+  ),
 }
 
 export const WithSection: Story = {

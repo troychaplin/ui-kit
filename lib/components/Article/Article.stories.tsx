@@ -1,9 +1,9 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Article, ArticleProps } from '.'
+import { Article, ArticleProps } from '../Article'
 import { ArticleData } from './data'
 
-const meta: Meta<typeof Article> = {
+const meta = {
   title: 'Layouts/Article',
   component: Article,
   tags: ['autodocs'],
@@ -13,10 +13,11 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-  args: {
-    children: <p>Article element</p>,
-  } as ArticleProps,
-  render: (args) => <Article {...args} />,
+  render: (args) => (
+    <Article {...args}>
+      <p>Article element</p>
+    </Article>
+  ),
 }
 
 export const ContentProp: Story = {

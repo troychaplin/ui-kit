@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Column } from '.'
+import { Column, ColumnProps } from '.'
 
 const meta = {
   title: 'Layouts/Column',
@@ -12,6 +12,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
+  args: {
+    cols: 2,
+    gap: 25,
+  } as ColumnProps,
   render: (args) => (
     <Column {...args}>
       <Column.Content>

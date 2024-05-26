@@ -1,10 +1,10 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { CardGroup } from '.'
+import { CardGroup, CardGroupProps } from '.'
 import { Card } from '../Card'
 
 const meta = {
-  title: 'Components/Card Group',
+  title: 'Components/CardGroup',
   component: CardGroup,
   // subcomponents: { Card },
   tags: ['autodocs'],
@@ -14,6 +14,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
+  args: {
+    cols: 3,
+    gap: 25,
+  } as CardGroupProps,
   render: (args) => (
     <CardGroup {...args}>
       {Array.from({ length: 8 }).map((_, index) => (
