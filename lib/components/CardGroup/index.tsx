@@ -13,7 +13,7 @@ export const CardGroup = ({ children, cols = 3, gap = 30 }: CardGroupProps) => {
   }
 
   return (
-    <div className={`grid ${gridColumns[cols]}`} style={style}>
+    <div className={`ui-cardgroup grid ${gridColumns[cols]}`} style={style}>
       {children}
     </div>
   )

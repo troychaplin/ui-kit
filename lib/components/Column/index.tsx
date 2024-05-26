@@ -16,7 +16,7 @@ export const ColumnContainer = ({ children, cols = 2, gap = 30 }: ColumnProps) =
   }
 
   return (
-    <div className={`grid ${gridColumns[cols]}`} style={style}>
+    <div className={`ui-column grid ${gridColumns[cols]}`} style={style}>
       {children}
     </div>
   )

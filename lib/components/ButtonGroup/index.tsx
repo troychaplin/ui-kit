@@ -13,7 +13,7 @@ export const ButtonGroup = ({ children, isCenter = false, gap = 10 }: ButtonGrou
   }
 
   return (
-    <div className={`flex ${centerButtons}`} style={style}>
+    <div className={`ui-buttongroup flex ${centerButtons}`} style={style}>
       {children}
     </div>
   )
