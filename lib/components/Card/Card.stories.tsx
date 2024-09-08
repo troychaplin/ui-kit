@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     children: 'Customize the card',
+    maxWidth: 'md',
     rounded: 'base',
     shadow: 'md',
     borderWidth: 1,

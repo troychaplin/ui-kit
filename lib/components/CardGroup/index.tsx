@@ -1,12 +1,14 @@
 import { uiGridColumns } from '../../utils/tailwindProps'
 
+type GridColumnsKeys = keyof typeof uiGridColumns
+
 export interface CardGroupProps {
   children?: React.ReactNode
-  cols?: 1 | 2 | 3 | 4
+  cols?: GridColumnsKeys
   gap?: number
 }
 
-export const CardGroup = ({ children, cols = 3, gap = 25 }: CardGroupProps) => {
+export const CardGroup = ({ children, cols = 3, gap = 20 }: CardGroupProps) => {
   // Inline style object to handle grid gap
   const style = {
     gridGap: gap ? gap : '',
