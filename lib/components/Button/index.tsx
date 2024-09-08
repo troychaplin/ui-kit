@@ -10,7 +10,7 @@ export interface ButtonProps {
 
 export const Button = ({
   bgColor = '#2b8164',
-  textColor = '#ffffff', // Default text color
+  textColor = '#ffffff',
   label,
   type = 'button',
   size = 'md',

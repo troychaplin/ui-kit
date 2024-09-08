@@ -1,8 +1,11 @@
 import React from 'react'
+import { uiMaxWidth } from '../../utils/tailwindProps'
+
+type MaxWidthKeys = keyof typeof uiMaxWidth
 
 export interface MainProps {
   children: React.ReactNode
-  maxWidth?: '5xl' | '6xl' | '7xl' | 'max' | 'full'
+  maxWidth?: MaxWidthKeys
   noProse?: boolean
 }
 
