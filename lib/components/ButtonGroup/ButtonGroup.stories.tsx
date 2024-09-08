@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    gap: 15,
+    gap: 20,
     isCenter: false,
   } as ButtonGroupProps,
   render: (args) => (
