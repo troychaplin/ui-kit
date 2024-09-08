@@ -4,5 +4,5 @@
 @import 'tailwindcss/utilities';
 
 /* Global Classes */
-@import './styles/button-links.css';
+@import './components/Button/styles.css';
 @import './styles/max-width.css';
