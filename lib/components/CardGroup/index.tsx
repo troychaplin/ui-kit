@@ -8,7 +8,7 @@ export interface CardGroupProps {
   gap?: number
 }
 
-export const CardGroup = ({ children, cols = 3, gap = 25 }: CardGroupProps) => {
+export const CardGroup = ({ children, cols = 3, gap = 20 }: CardGroupProps) => {
   // Inline style object to handle grid gap
   const style = {
     gridGap: gap ? gap : '',

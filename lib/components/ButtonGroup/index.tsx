@@ -4,7 +4,7 @@ export interface ButtonGroupProps {
   gap?: number
 }
 
-export const ButtonGroup = ({ children, isCenter = false, gap = 15 }: ButtonGroupProps) => {
+export const ButtonGroup = ({ children, isCenter = false, gap = 20 }: ButtonGroupProps) => {
   const centerButtons = isCenter ? 'justify-center' : 'justify-start'
 
   // Inline style object to handle grid gap

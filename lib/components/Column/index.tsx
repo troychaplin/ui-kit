@@ -9,7 +9,7 @@ export interface ColumnProps {
   gap?: number
 }
 
-export const ColumnContainer = ({ children, cols = 2, gap = 25 }: ColumnProps) => {
+export const ColumnContainer = ({ children, cols = 2, gap = 20 }: ColumnProps) => {
   // Inline style object to handle grid gap
   const style = {
     gridGap: gap ? gap : '',
