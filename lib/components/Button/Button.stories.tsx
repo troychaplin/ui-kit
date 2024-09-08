@@ -15,6 +15,11 @@ export const Primary: Story = {
   args: {
     label: 'Button',
     bgColor: '#2b8164',
+    textColor: '#ffffff',
+    type: 'button',
+    size: 'md',
+    isOutline: false,
+    onClick: () => console.log('Button clicked'),
   } as ButtonProps,
   render: (args) => <Button {...args} />,
 }
