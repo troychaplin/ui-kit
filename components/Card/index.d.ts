@@ -1,6 +1,6 @@
-import { roundedCorners, dropShadow } from '../../utils/tailwindProps';
-type RoundedKeys = keyof typeof roundedCorners;
-type ShadowKeys = keyof typeof dropShadow;
+import { uiRoundedCorners, uiDropShadow } from '../../utils/tailwindProps';
+type RoundedKeys = keyof typeof uiRoundedCorners;
+type ShadowKeys = keyof typeof uiDropShadow;
 export interface CardProps {
     children?: React.ReactNode;
     rounded?: RoundedKeys;

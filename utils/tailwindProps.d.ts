@@ -1,4 +1,4 @@
-export declare const maxWidth: {
+export declare const uiMaxWidth: {
     xs: string;
     sm: string;
     md: string;
@@ -13,7 +13,7 @@ export declare const maxWidth: {
     max: string;
     full: string;
 };
-export declare const gridColumns: {
+export declare const uiGridColumns: {
     1: string;
     2: string;
     3: string;
@@ -21,17 +21,17 @@ export declare const gridColumns: {
     '1/3': string;
     '2/3': string;
 };
-export declare const flexRow: {
+export declare const uiFlexRow: {
     sm: string;
     md: string;
     lg: string;
 };
-export declare const flexCol: {
+export declare const uiFlexCol: {
     sm: string;
     md: string;
     lg: string;
 };
-export declare const roundedCorners: {
+export declare const uiRoundedCorners: {
     none: string;
     sm: string;
     base: string;
@@ -41,7 +41,7 @@ export declare const roundedCorners: {
     '2xl': string;
     full: string;
 };
-export declare const dropShadow: {
+export declare const uiDropShadow: {
     none: string;
     base: string;
     md: string;

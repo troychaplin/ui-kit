@@ -1,5 +1,5 @@
-import { gridColumns } from '../../utils/tailwindProps';
-type ColumnKeys = keyof typeof gridColumns;
+import { uiGridColumns } from '../../utils/tailwindProps';
+type ColumnKeys = keyof typeof uiGridColumns;
 export interface ColumnProps {
     children?: React.ReactNode;
     cols?: ColumnKeys;
