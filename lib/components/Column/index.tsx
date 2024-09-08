@@ -1,7 +1,7 @@
-import { gridColumns } from '../../utils/tailwindProps'
+import { uiGridColumns } from '../../utils/tailwindProps'
 import { ColumnContent } from './content'
 
-type ColumnKeys = keyof typeof gridColumns
+type ColumnKeys = keyof typeof uiGridColumns
 
 export interface ColumnProps {
   children?: React.ReactNode
@@ -16,7 +16,7 @@ export const ColumnContainer = ({ children, cols = 2, gap = 25 }: ColumnProps) =
   }
 
   return (
-    <div className={`ui-column grid ${gridColumns[cols]}`} style={style}>
+    <div className={`ui-column grid ${uiGridColumns[cols]}`} style={style}>
       {children}
     </div>
   )

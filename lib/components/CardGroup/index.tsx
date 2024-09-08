@@ -1,4 +1,4 @@
-import { gridColumns } from '../../utils/tailwindProps'
+import { uiGridColumns } from '../../utils/tailwindProps'
 
 export interface CardGroupProps {
   children?: React.ReactNode
@@ -13,7 +13,7 @@ export const CardGroup = ({ children, cols = 3, gap = 25 }: CardGroupProps) => {
   }
 
   return (
-    <div className={`ui-cardgroup grid ${gridColumns[cols]}`} style={style}>
+    <div className={`ui-cardgroup grid ${uiGridColumns[cols]}`} style={style}>
       {children}
     </div>
   )

@@ -1,4 +1,4 @@
-export const maxWidth = {
+export const uiMaxWidth = {
   xs: 'max-w-xs',
   sm: 'max-w-sm',
   md: 'max-w-md',
@@ -14,7 +14,7 @@ export const maxWidth = {
   full: 'max-w-full',
 }
 
-export const gridColumns = {
+export const uiGridColumns = {
   1: '',
   2: 'md:grid-cols-2',
   3: 'md:grid-cols-3',
@@ -23,19 +23,19 @@ export const gridColumns = {
   '2/3': 'lg:grid-cols-3 lg:[&>*:first-child]:col-span-2',
 }
 
-export const flexRow = {
+export const uiFlexRow = {
   sm: 'sm:flex-row',
   md: 'md:flex-row',
   lg: 'lg:flex-row',
 }
 
-export const flexCol = {
+export const uiFlexCol = {
   sm: 'sm:flex-col',
   md: 'md:flex-col',
   lg: 'lg:flex-col',
 }
 
-export const roundedCorners = {
+export const uiRoundedCorners = {
   none: 'rounded-none',
   sm: 'rounded-sm',
   base: 'rounded',
@@ -46,7 +46,7 @@ export const roundedCorners = {
   full: 'rounded-full',
 }
 
-export const dropShadow = {
+export const uiDropShadow = {
   none: 'shadow-none',
   base: 'shadow',
   md: 'shadow-md',
