@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     cols: 3,
-    gap: 25,
+    gap: 20,
   } as CardGroupProps,
   render: (args) => (
     <CardGroup {...args}>
