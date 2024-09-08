@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export interface ButtonGroupProps {
     children?: React.ReactNode;
     isCenter?: boolean;

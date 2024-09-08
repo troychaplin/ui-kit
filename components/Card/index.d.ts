@@ -1,5 +1,4 @@
 import { roundedCorners, dropShadow } from '../../utils/tailwindProps';
-
 type RoundedKeys = keyof typeof roundedCorners;
 type ShadowKeys = keyof typeof dropShadow;
 export interface CardProps {
