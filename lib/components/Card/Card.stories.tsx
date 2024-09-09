@@ -22,7 +22,7 @@ export const Primary: Story = {
   } as CardProps,
   render: (args) => (
     <Card {...args}>
-      <p>Card component</p>
+      <p className="py-5 px-7">Card component</p>
     </Card>
   ),
 }
