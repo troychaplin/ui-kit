@@ -18,6 +18,7 @@ export declare const uiGridColumns: {
     2: string;
     3: string;
     4: string;
+    6: string;
     '1/3': string;
     '2/3': string;
 };
