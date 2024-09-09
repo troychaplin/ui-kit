@@ -1,19 +1,26 @@
 # Main Layout Component
 
-The `<main>` tag represents the main content area of a document. The content inside the <main> tag should be unique to the document and should not contain other global elements such as navigation, asides, footers and more. There should be no more than one <main> tag used in a document.
+The `<main>` HTML element represents the dominant content of the `<body>` of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
 
-## Props
+Get more info about the main tag on the [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)
 
-The following props are available on the `Main` component:
-
-- `children` - accepts children elements
-- `maxWidth` - sets a max width class that applies to direct descendants
-- `noProse` - removes the automatically applied Tailwind prose classes
-
-## Example
+## Usage Example
 
 ```jsx
-<Main maxWidth="5xl">
+<Main>
   <p>Add content elements here</p>
 </Main>
 ```
+
+## Properties
+
+The following props are available on the `Main` component:
+
+| Prop       | Purpose                                                  | Default | Options         |
+| ---------- | -------------------------------------------------------- | ------- | --------------- |
+| `children` | Accepts children elements                                |         |                 |
+| `noProse`  | Removes the automatically applied Tailwind prose classes | `false` | `true`, `false` |
+
+## Additional Info
+
+- `noProse`: currently prose classes of `prose prose-lg md:prose-xl` from the [Tailwind CSS Typography](https://github.com/tailwindlabs/tailwindcss-typography) plugin are applied by default

@@ -26,7 +26,7 @@ export const Card = ({ children, maxWidth, rounded, shadow, borderWidth, borderC
 
   return (
     <div className={`ui-card bg-white ${cardWidth} ${cardRounded} ${cardShadow}`} style={style}>
-      <div className="py-5 px-7">{children}</div>
+      {children}
     </div>
   )
 }

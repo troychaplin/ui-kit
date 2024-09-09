@@ -15,7 +15,6 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    maxWidth: '5xl',
     noProse: false,
   } as MainProps,
   render: (args) => (
