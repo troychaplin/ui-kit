@@ -1,22 +1,26 @@
-import { uiGridColumns } from '../../utils/tailwindProps'
+import { uiMaxWidth, uiGridColumns } from '../../utils/tailwindProps'
 import { ColumnContent } from './content'
 
+type MaxWidthKeys = keyof typeof uiMaxWidth
 type ColumnKeys = keyof typeof uiGridColumns
 
 export interface ColumnProps {
   children?: React.ReactNode
+  maxWidth?: MaxWidthKeys
   cols?: ColumnKeys
   gap?: number
 }
 
-export const ColumnContainer = ({ children, cols = 2, gap = 20 }: ColumnProps) => {
-  // Inline style object to handle grid gap
+export const ColumnContainer = ({ children, maxWidth = '5xl', cols = 2, gap = 20 }: ColumnProps) => {
   const style = {
     gridGap: gap ? gap : '',
   }
 
   return (
-    <div className={`ui-column grid ${uiGridColumns[cols]}`} style={style}>
+    <div
+      className={`ui-column ui-no-max-width ${uiMaxWidth[maxWidth]} mx-auto grid ${uiGridColumns[cols]}`}
+      style={style}
+    >
       {children}
     </div>
   )

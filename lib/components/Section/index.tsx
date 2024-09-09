@@ -6,14 +6,12 @@ type MaxWidthKeys = keyof typeof uiMaxWidth
 export interface SectionProps {
   children?: React.ReactNode
   as?: 'section' | 'div'
-  isGrey?: boolean
   maxWidth?: MaxWidthKeys
 }
 
-export const Section = ({ children, as = 'section', isGrey, maxWidth }: SectionProps) => {
+export const Section = ({ children, as = 'section', maxWidth = '5xl' }: SectionProps) => {
   const SectionComponent = as
-  const childWidth = maxWidth ? `ui-max-width-${maxWidth} ui-no-max-width` : ''
-  const bgStyles = isGrey ? 'bg-green-400' : 'bg-white'
+  const maxWidthChildren = maxWidth ? `ui-max-width-${maxWidth}` : ''
 
-  return <SectionComponent className={`ui-main ${childWidth} ${bgStyles}`}>{children}</SectionComponent>
+  return <SectionComponent className={`ui-main ${maxWidthChildren}`}>{children}</SectionComponent>
 }
