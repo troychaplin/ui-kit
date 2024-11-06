@@ -4,7 +4,7 @@ import { CardGroup, CardGroupProps } from '.'
 import { Card } from '../Card'
 
 const meta = {
-  title: 'Components/CardGroup',
+  title: 'Components/Card Group',
   component: CardGroup,
   // subcomponents: { Card },
   tags: ['autodocs'],
@@ -22,7 +22,7 @@ export const Primary: Story = {
     <CardGroup {...args}>
       {Array.from({ length: 8 }).map((_, index) => (
         <Card rounded="base" borderWidth={1} borderColor="#dfdfdf">
-          <p>Card #{index}</p>
+          <p className="py-5 px-7">Card #{index}</p>
         </Card>
       ))}
     </CardGroup>
